@@ -22,8 +22,7 @@ PRIDE-PPPAR are available for:
 * High-rate GPS data
     * 1Hz, 5hz, 10Hz    
 
-Notes: The phase clock/bias products, which are computed and released by Wuhan University in bias-SINEX format [download link](ftp://igs.gnsswhu.cn/pub/whu/phasebias), 
-are required by PRIDE-PPPAR.`
+Notes: The phase clock/bias products, which are computed and released by Wuhan University in bias-SINEX format [download link](ftp://igs.gnsswhu.cn/pub/whu/phasebias), are required by PRIDE-PPPAR.
 
 ## License
 ***Copyright (C) 2019 by Wuhan University, All rights reserved.***
