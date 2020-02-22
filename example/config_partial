@@ -1,0 +1,71 @@
+# This partitial configuration file is used by test.sh to generate a complete config.
+# 
+# The following options can be kept for all data processing (except for 'Station used' list)
+# For Ambiguity fixing, it can always be 'FIX' in configuration file.  Actually, AR is
+# controlled by the command line arguments of pride_pppar.
+
+## strategies
+Remove bias      = YES                         ! change to NO if AR method is LAMBDA
+ZTD model        = PWC:60                      ! troposphere estimation. PWC: piece-wise constant, 60: 1 hour
+HTG model        = PWC:720                     ! troposphere horizontal gradient. PWC/NON
+
+## ambiguity fixing options
+Ambiguity fixing    = FIX                      ! Ambiguity fixing: NO/FIX/LAMBDA
+Common observing    = 600                      ! common observation time in seconds
+Cutoff elevation    = 15                       ! cutoff angles for eligible ambiguities in AR
+Widelane decision   = 0.20 0.15 1000.          ! deriation, sigma in WL-cycle
+Narrowlane decision = 0.15 0.15 1000.          ! deriation, sigma in NL-cycle
+Critical search     = 2 4 1.8 3.0
+
+# Insert # at the begining of individual GPS PRN means not to use this satellite
+
+## Satellite list
++GPS satellites
+*PN
+ 01
+ 02
+ 03
+ 04
+ 05
+ 06
+ 07
+ 08
+ 09
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+-GPS satellites
+
+# User can add more station in the following table. Stations will be processed one by one.
+# Available positiioning mode: S -- static
+#                              K -- kinematic
+# Available mapping function:  GMF -- Global Mapping Function
+#                              VM1 -- Vienna Mapping Function (VMF1)
+# Other arguments can be kept.
+
+## Station list
++Station used
+*NAME TP MAP CLKm EV ZTDm PoDm HTGm PoDm RAGm PHSc PoXEm PoYNm PoZHm
+ algo S  GMF 9000  7 0.20 .020 .005 .002 3.00 .006 10.00 10.00 10.00
+ zimm S  GMF 9000  7 0.20 .020 .005 .002 3.00 .006 10.00 10.00 10.00
+-Station used

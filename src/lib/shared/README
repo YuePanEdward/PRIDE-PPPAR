@@ -1,0 +1,6 @@
+This directory contains different versions of libpride_pppar.so for linux and max os.
+
+The name of the shared library is libpride_pppar.so.x (x is the major version number 
+of gfortran). A soft link of specific libpride_pppar.so.x
+(default: linux-64/libpride_pppar.so.4) should be created in src/lib/ according to 
+your gfortran version and OS.

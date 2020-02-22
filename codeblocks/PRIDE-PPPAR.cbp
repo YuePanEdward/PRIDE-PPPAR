@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PRIDE-PPPAR" />
+		<Option pch_mode="2" />
+		<Option compiler="gfortran" />
+		<Build>
+			<Target title="libcom">
+				<Option output="./bin/com" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output=".obj" />
+				<Option type="2" />
+				<Option compiler="gfortran" />
+				<Option createDefFile="1" />
+			</Target>
+			<Target title="libde405">
+				<Option output="./bin/de405" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output=".obj" />
+				<Option type="2" />
+				<Option compiler="gfortran" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-fno-align-commons" />
+				</Compiler>
+			</Target>
+			<Target title="liblambda">
+				<Option output="./bin/lambda" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output=".obj" />
+				<Option type="2" />
+				<Option compiler="gfortran" />
+				<Option createDefFile="1" />
+			</Target>
+			<Target title="arsig">
+				<Option output="../bin/arsig" prefix_auto="1" extension_auto="1" />
+				<Option object_output=".obj" />
+				<Option external_deps="../src/lib/libpride_pppar.so;" />
+				<Option type="1" />
+				<Option compiler="gfortran" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add directory="bin" />
+				</Compiler>
+				<Linker>
+					<Add library="bin/libcom.a" />
+					<Add library="bin/liblambda.a" />
+					<Add library="bin/libpride_pppar.so" />
+					<Add directory="bin" />
+				</Linker>
+			</Target>
+			<Target title="lsq">
+				<Option output="../bin/lsq" prefix_auto="1" extension_auto="1" />
+				<Option object_output=".obj" />
+				<Option external_deps="../src/lib/libpride_pppar.so;" />
+				<Option type="1" />
+				<Option compiler="gfortran" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add directory="bin" />
+				</Compiler>
+				<Linker>
+					<Add library="bin/libcom.a" />
+					<Add library="bin/libde405.a" />
+					<Add library="bin/libpride_pppar.so" />
+					<Add directory="bin" />
+				</Linker>
+			</Target>
+			<Target title="redig">
+				<Option output="../bin/redig" prefix_auto="1" extension_auto="1" />
+				<Option object_output=".obj" />
+				<Option type="1" />
+				<Option compiler="gfortran" />
+				<Option use_console_runner="0" />
+				<Linker>
+					<Add library="bin/libcom.a" />
+					<Add directory="bin" />
+				</Linker>
+			</Target>
+			<Target title="tedit">
+				<Option output="../bin/tedit" prefix_auto="1" extension_auto="1" />
+				<Option object_output=".obj" />
+				<Option type="1" />
+				<Option compiler="gfortran" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add option="-fno-align-commons" />
+				</Compiler>
+				<Linker>
+					<Add library="bin/libcom.a" />
+					<Add directory="bin" />
+				</Linker>
+			</Target>
+			<Target title="sp3orb">
+				<Option output="../bin/sp3orb" prefix_auto="1" extension_auto="1" />
+				<Option object_output=".obj" />
+				<Option type="1" />
+				<Option compiler="gfortran" />
+				<Option use_console_runner="0" />
+				<Linker>
+					<Add library="bin/libcom.a" />
+					<Add directory="bin" />
+				</Linker>
+			</Target>
+			<Target title="mergesp3">
+				<Option output="../bin/mergesp3" prefix_auto="1" extension_auto="1" />
+				<Option object_output=".obj" />
+				<Option type="1" />
+				<Option compiler="gfortran" />
+				<Option use_console_runner="0" />
+				<Linker>
+					<Add library="bin/libcom.a" />
+					<Add directory="bin" />
+				</Linker>
+			</Target>
+			<Target title="get_ctrl">
+				<Option output="../bin/get_ctrl" prefix_auto="1" extension_auto="1" />
+				<Option object_output=".obj" />
+				<Option type="1" />
+				<Option compiler="gfortran" />
+				<Option use_console_runner="0" />
+				<Linker>
+					<Add library="bin/libcom.a" />
+					<Add directory="bin" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="all" targets="libcom;libde405;liblambda;arsig;lsq;redig;tedit;sp3orb;mergesp3;get_ctrl;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-w" />
+			<Add option="-g" />
+		</Compiler>
+		<Linker>
+			<Add option="-O3" />
+		</Linker>
+		<Unit filename="../src/arsig/abfcb.h">
+			<Option target="arsig" />
+		</Unit>
+		<Unit filename="../src/arsig/ambsit.h">
+			<Option target="arsig" />
+		</Unit>
+		<Unit filename="../src/arsig/arsig.f90">
+			<Option weight="0" />
+			<Option target="arsig" />
+		</Unit>
+		<Unit filename="../src/arsig/define_sat_pairs.f90">
+			<Option weight="0" />
+			<Option target="arsig" />
+		</Unit>
+		<Unit filename="../src/arsig/find_indep.f90">
+			<Option weight="0" />
+			<Option target="arsig" />
+		</Unit>
+		<Unit filename="../src/arsig/fix_ambiguity.f90">
+			<Option weight="0" />
+			<Option target="arsig" />
+		</Unit>
+		<Unit filename="../src/arsig/get_arsig_args.f90">
+			<Option weight="0" />
+			<Option target="arsig" />
+		</Unit>
+		<Unit filename="../src/arsig/read_ambiguity.f90">
+			<Option weight="0" />
+			<Option target="arsig" />
+		</Unit>
+		<Unit filename="../src/arsig/read_invnormal.f90">
+			<Option weight="0" />
+			<Option target="arsig" />
+		</Unit>
+		<Unit filename="../src/arsig/write_ambcon.f90">
+			<Option weight="0" />
+			<Option target="arsig" />
+		</Unit>
+		<Unit filename="../src/de405/de405/de405.f90">
+			<Option weight="0" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/de405/de405/jpleph.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/de405/interp.f">
+			<Option weight="0" />
+			<Option target="libde405" />
+		</Unit>
+		<Unit filename="../src/de405/jpleph.h">
+			<Option target="libde405" />
+		</Unit>
+		<Unit filename="../src/de405/pleph.f">
+			<Option weight="0" />
+			<Option target="libde405" />
+		</Unit>
+		<Unit filename="../src/de405/split.f">
+			<Option weight="0" />
+			<Option target="libde405" />
+		</Unit>
+		<Unit filename="../src/de405/state.f">
+			<Option weight="0" />
+			<Option target="libde405" />
+		</Unit>
+		<Unit filename="../src/get_ctrl/get_ctrl.f90">
+			<Option weight="0" />
+			<Option target="get_ctrl" />
+		</Unit>
+		<Unit filename="../src/header/antatx.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/header/brdeph.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/header/const.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/header/difamb.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/header/invnor.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/header/orbit.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/header/rnxobs.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/header/satellite.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/header/station.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../src/lambda/backts.f">
+			<Option weight="0" />
+			<Option target="liblambda" />
+		</Unit>
+		<Unit filename="../src/lambda/chistrt4.f">
+			<Option weight="0" />
+			<Option target="liblambda" />
+		</Unit>
+		<Unit filename="../src/lambda/collects.f">
+			<Option weight="0" />
+			<Option target="liblambda" />
+		</Unit>
+		<Unit filename="../src/lambda/dinki.f">
+			<Option weight="0" />
+			<Option target="liblambda" />
+		</Unit>
+		<Unit filename="../src/lambda/fi71.f">
+			<Option weight="0" />
+			<Option target="liblambda" />
+		</Unit>
+		<Unit filename="../src/lambda/fmfac6.f">
+			<Option weight="0" />
+			<Option target="liblambda" />
+		</Unit>
+		<Unit filename="../src/lambda/invlt2d.f">
+			<Option weight="0" />
+			<Option target="liblambda" />
+		</Unit>
+		<Unit filename="../src/lambda/jnt2.f">
+			<Option weight="0" />
+			<Option target="liblambda" />
+		</Unit>
+		<Unit filename="../src/lambda/lambda4.f">
+			<Option weight="0" />
+			<Option target="liblambda" />
+		</Unit>
+		<Unit filename="../src/lambda/src1i.f">
+			<Option weight="0" />
+			<Option target="liblambda" />
+		</Unit>
+		<Unit filename="../src/lambda/stores.f">
+			<Option weight="0" />
+			<Option target="liblambda" />
+		</Unit>
+		<Unit filename="../src/lambda/ztrani.f">
+			<Option weight="0" />
+			<Option target="liblambda" />
+		</Unit>
+		<Unit filename="../src/lib/ambslv.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/bdeci.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/brdxyz.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/candid_ambi.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/cbpn2000.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/cfa.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/chi2.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/chitst.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/cltasy.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/cross.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/day_of_year.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/dot.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/ee2000.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/eect2000.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/ef2int.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/era2000.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/everett_coeff.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/everett_interp_orbit.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/ffun.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/file_name.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/find_ambd.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/find_flag.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/findkey.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/fixamb_solution.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/fund_arg_nutation.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/get_antenna_corr.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/get_valid_unit.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/get_wgt_mean.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/global_map.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/global_meteo.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/gmst2000.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/gpsweek.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/gst2000.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/left_justify_string.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/lower_string.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/map_invnormal.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/matinv.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/matmpy.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/mete_sea2site.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/mjd2date.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/mjd2doy.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/modified_julday.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/nmfh2p1.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/nmfw2.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/normal.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/nu2000b.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/ocean_tidal_loading.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/oceanload_coef.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/ortho_eop.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/partial_gps.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/pchi2.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/phase_windup.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/pnormal.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/pointer_int.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/pointer_string.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/polydf.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/pom2000.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/precession_angle.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/rdatx.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/rdorbh.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/rdrnxn.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/rdrnxoh.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/rdrnxoi.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/rdrnxoi3.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/rdsp3.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/read_dcb.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/read_igserp.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/read_iniambi.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/read_meteo.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/read_obsrhd.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/read_position.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/read_recclk.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/read_satclk.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/rot_enu2xyz.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/rot_scfix2j2000.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/rot_x.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/rot_y.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/rot_z.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/run_tim.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/saaszd.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/sod2hms.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/solid_earth_tide.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/sort_invx.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/sp2000.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/spherical_harmonics.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/split_string.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/t2c2000.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/taiutc.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/tide_displace.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/timdif.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/timinc.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/troposphere_delay.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/troposphere_map.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/unit_vector.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/upper_string.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/ut1tid.h">
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/ut1ut1r.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/vmf1_ht.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/wpress.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/xyzblh.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/yeardoy2monthday.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lib/yr2year.f90">
+			<Option weight="0" />
+			<Option target="libcom" />
+		</Unit>
+		<Unit filename="../src/lsq/get_lsq_args.f90">
+			<Option weight="0" />
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/lsq/gpsmod.f90">
+			<Option weight="0" />
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/lsq/lsq.f90">
+			<Option weight="0" />
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/lsq/lsq.h">
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/lsq/lsq_add_ambcon.f90">
+			<Option weight="0" />
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/lsq/lsq_add_newamb.f90">
+			<Option weight="0" />
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/lsq/lsq_add_obs.f90">
+			<Option weight="0" />
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/lsq/lsq_cnt_prmt.f90">
+			<Option weight="0" />
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/lsq/lsq_init.f90">
+			<Option weight="0" />
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/lsq/lsq_process.f90">
+			<Option weight="0" />
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/lsq/lsq_rcv_prmt.f90">
+			<Option weight="0" />
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/lsq/lsq_rmv_normal.f90">
+			<Option weight="0" />
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/lsq/lsq_slv_prmt.f90">
+			<Option weight="0" />
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/lsq/lsqcfg.h">
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/lsq/read_snx.f90">
+			<Option weight="0" />
+			<Option target="lsq" />
+		</Unit>
+		<Unit filename="../src/orbit/get_sp3_args.f90">
+			<Option weight="0" />
+			<Option target="mergesp3" />
+		</Unit>
+		<Unit filename="../src/orbit/get_sp3orb_args.f90">
+			<Option weight="0" />
+			<Option target="sp3orb" />
+		</Unit>
+		<Unit filename="../src/orbit/mergesp3.f90">
+			<Option weight="0" />
+			<Option target="mergesp3" />
+		</Unit>
+		<Unit filename="../src/orbit/sp3orb.f90">
+			<Option weight="0" />
+			<Option target="sp3orb" />
+		</Unit>
+		<Unit filename="../src/redig/check_slip.f90">
+			<Option weight="0" />
+			<Option target="redig" />
+		</Unit>
+		<Unit filename="../src/redig/data_flag.h">
+			<Option target="redig" />
+		</Unit>
+		<Unit filename="../src/redig/delet_huge.f90">
+			<Option weight="0" />
+			<Option target="redig" />
+		</Unit>
+		<Unit filename="../src/redig/get_redig_args.f90">
+			<Option weight="0" />
+			<Option target="redig" />
+		</Unit>
+		<Unit filename="../src/redig/istrue.f90">
+			<Option weight="0" />
+			<Option target="redig" />
+		</Unit>
+		<Unit filename="../src/redig/read_residual.f90">
+			<Option weight="0" />
+			<Option target="redig" />
+		</Unit>
+		<Unit filename="../src/redig/redig.f90">
+			<Option weight="0" />
+			<Option target="redig" />
+		</Unit>
+		<Unit filename="../src/redig/remov_shrt.f90">
+			<Option weight="0" />
+			<Option target="redig" />
+		</Unit>
+		<Unit filename="../src/redig/rescfg.h">
+			<Option target="redig" />
+		</Unit>
+		<Unit filename="../src/tedit/check_for_jump.f90">
+			<Option weight="0" />
+			<Option target="tedit" />
+		</Unit>
+		<Unit filename="../src/tedit/check_ionosphere.f90">
+			<Option weight="0" />
+			<Option target="tedit" />
+		</Unit>
+		<Unit filename="../src/tedit/check_range.f90">
+			<Option weight="0" />
+			<Option target="tedit" />
+		</Unit>
+		<Unit filename="../src/tedit/check_sd.f90">
+			<Option weight="0" />
+			<Option target="tedit" />
+		</Unit>
+		<Unit filename="../src/tedit/data_flag.h">
+			<Option target="tedit" />
+		</Unit>
+		<Unit filename="../src/tedit/edit_widelane.f90">
+			<Option weight="0" />
+			<Option target="tedit" />
+		</Unit>
+		<Unit filename="../src/tedit/elevation.f90">
+			<Option weight="0" />
+			<Option target="tedit" />
+		</Unit>
+		<Unit filename="../src/tedit/get_control_parameter.f90">
+			<Option weight="0" />
+			<Option target="tedit" />
+		</Unit>
+		<Unit filename="../src/tedit/istrue.f90">
+			<Option weight="0" />
+			<Option target="tedit" />
+		</Unit>
+		<Unit filename="../src/tedit/lc_help.f90">
+			<Option weight="0" />
+			<Option target="tedit" />
+		</Unit>
+		<Unit filename="../src/tedit/read_rinex_file.f90">
+			<Option weight="0" />
+			<Option target="tedit" />
+		</Unit>
+		<Unit filename="../src/tedit/remove_short.f90">
+			<Option weight="0" />
+			<Option target="tedit" />
+		</Unit>
+		<Unit filename="../src/tedit/set_flag.f90">
+			<Option weight="0" />
+			<Option target="tedit" />
+		</Unit>
+		<Unit filename="../src/tedit/tedit.f90">
+			<Option weight="0" />
+			<Option target="tedit" />
+		</Unit>
+		<Unit filename="../src/tedit/write_diag_rpt.f90">
+			<Option weight="0" />
+			<Option target="tedit" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

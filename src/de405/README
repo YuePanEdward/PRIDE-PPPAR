@@ -1,0 +1,4 @@
+The DE405 module is provided as a dynamic link
+library because of some potential or possible redistribution restrictions 
+by its authors. Those who are interested in the module and want to know more
+information on it can refer to NASA JPL (ftp://ssd.jpl.nasa.gov/pub/eph/planets/fortran/).
