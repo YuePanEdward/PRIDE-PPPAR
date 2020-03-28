@@ -71,7 +71,13 @@ If you find this work useful in your research, please consider cite:
 
 [(知乎)PRIDE-PPPAR源码阅读小记](https://zhuanlan.zhihu.com/p/101144206)
 
-### Inutuition
+[PPP阶段小结：GNSS、MGEX现状，开源软件和学术研究动态](https://zhuanlan.zhihu.com/p/109142105)
+
+[RTKLIB 源码阅读笔记](https://zhuanlan.zhihu.com/p/78359579)
+
+感谢博文作者的分享～
+
+### Intuition
 Let's make the realm of Geodesy more open.
 
 ---
